@@ -20,8 +20,8 @@ public class Principal {
         triangulo.setLado2(ladob);
         triangulo.setLado3(ladoc);
         band=triangulo.verificarTriangulo(); //verifica dado los lados ingresados si forman un triangulo
+        //si devuelve true ents si es un tringulo sino no
         if(band==true){
-       
             System.out.println("ES UN TRIANGULO");
             System.out.println("el perimetro es:"+triangulo.obtenerPerimetro());
         }else{
