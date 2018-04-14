@@ -21,6 +21,7 @@ public class Principal {
         triangulo.setLado3(ladoc);
         band=triangulo.verificarTriangulo(); //verifica dado los lados ingresados si forman un triangulo
         if(band==true){
+       
             System.out.println("ES UN TRIANGULO");
             System.out.println("el perimetro es:"+triangulo.obtenerPerimetro());
         }else{
