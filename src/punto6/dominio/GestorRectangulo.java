@@ -25,6 +25,7 @@ public class GestorRectangulo {
     public double calcularPunto(double a,double b){
         return Math.sqrt(Math.pow(a-b, 2));
     }
+    //Se crean los objetos para poder luego almacenarlos en la lista
     public void cargarDatos(){
        TablaRectangulo obj1=new TablaRectangulo(3,4,calcularPunto(3,4),calcularArea(3,4),calcularPerimetro(3,4));
        TablaRectangulo obj2=new TablaRectangulo(5,3,calcularPunto(5,3),calcularArea(3,5),calcularPerimetro(3,5));
@@ -37,6 +38,7 @@ public class GestorRectangulo {
             lista.add(obj4);
             lista.add(obj5);
     }
+    //permite mostrar por pantlla los objetos que estan alamacenados en el ArrayList
     public void mostarDatos(){
         int i=0;
         System.out.println("\nN°\t\tBASE\t\tALTURA\t\tPUNTO\t\tSUPERFICIE\t\tPERIMETRO");
