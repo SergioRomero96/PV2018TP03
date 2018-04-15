@@ -19,7 +19,7 @@ public class GestorAuto {
     public void cargaDatos(){
        Autos auto1=new Autos("A00032","Ford",2018,"Gris","Diesel");
        Autos auto2=new Autos("A0048","Toyota",2016,"Negro","Super");
-       Autos auto3=new Autos("A0087","Chevrolet",2015,"Morado","Diesel");
+       Autos auto3=new Autos("A0087","Peugeot",2015,"Morado","Diesel");
        Autos auto4=new Autos("A0087","Nisan",2010,"Azul","Super"); 
        Autos auto5=new Autos("A04863","BMW",2018,"Azul","Infinia");
        Autos auto6=new Autos("AB558","Bentley",2016,"Gris","Diese");

@@ -7,7 +7,6 @@
 package punto8.dominio;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * 
@@ -41,22 +40,5 @@ public class GestorLibros {
     public void setLista(ArrayList<Libro> lista) {
         this.lista = lista;
     }
-   /*public void buscarLibro(){
-        Scanner scanner=new Scanner(System.in);
-        String tit;
-       scanner.skip("\n");
-            do{
-                System.out.print("Ingrese el Titulo a buscar (15 caracteres MAX): ");
-                tit = scanner.nextLine();  
-            }while(tit.isEmpty()|| tit.length() > 15);
-    for(Libro l:lista){
-        if(l.getTitulo().toUpperCase().equals(tit.toUpperCase())){
-            System.out.println("Si se econtro el libro");
-            mostrarLibros(lista);
-        }else{
-            System.out.println("No se encontro el libro");
-        }
-    }
-    }*/
     
 }
