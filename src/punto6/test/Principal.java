@@ -10,6 +10,7 @@ public class Principal {
       gestor.mostarDatos();
       gestor.eliminarTriangulo();
       gestor.mostarDatos();
+      
         }
     }  
 
