@@ -41,7 +41,7 @@ public class GestorLibros {
     public void setLista(ArrayList<Libro> lista) {
         this.lista = lista;
     }
-    public void buscarLibro(){
+   /*public void buscarLibro(){
         Scanner scanner=new Scanner(System.in);
         String tit;
        scanner.skip("\n");
@@ -57,6 +57,6 @@ public class GestorLibros {
             System.out.println("No se encontro el libro");
         }
     }
-    }
+    }*/
     
 }

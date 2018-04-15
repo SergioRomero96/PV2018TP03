@@ -53,6 +53,6 @@ public class ProgramaPrincipal {
             resp = scanner.next().charAt(0);
         }while(resp != 'N');
         gestor.mostrarLibros(gestor.getLista());
-       gestor.buscarLibro();
+       
     }
 }
