@@ -7,6 +7,7 @@
 package punto8.dominio;
 
 import java.util.ArrayList;
+import punto12.dominio.NuevoLibro;
 
 /**
  * 
@@ -18,7 +19,7 @@ public class GestorLibros {
     public void agregarLibro(Libro libro){
         this.lista.add(libro);
     }
-    
+
     public void mostrarLibros(ArrayList<Libro> list){
         System.out.println("\nISBN\t\t\tTitulo\t\t\tAutor\t\t\tPrecio");
         System.out.println("---------------------------------------------------------------------------------------");
