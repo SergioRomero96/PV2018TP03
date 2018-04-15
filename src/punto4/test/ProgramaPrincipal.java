@@ -23,6 +23,7 @@ public class ProgramaPrincipal {
             arreglo.getNumeros()[contador] = scanner.nextInt();
             contador++;
         }
+        System.out.println("Se mostrara el arreglo");
         arreglo.mostrarElementosDelArreglo();
     }
 }
