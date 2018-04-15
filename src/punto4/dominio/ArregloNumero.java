@@ -31,6 +31,6 @@ public class ArregloNumero {
     public void mostrarElementosDelArreglo(){
         for(int i = 0; i < numeros.length; i++)
             System.out.println("Valor de elemento: "+numeros[i]);
-    }
+            }
     
 }

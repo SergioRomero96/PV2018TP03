@@ -64,7 +64,14 @@ public class GestorZapatilla {
                  band=true;break;
   case "Nike":
                 band=true;break;
+  case "Lqs Sporty":band=true;
+  case "Reebok":band=true;break;
+  case "Olympia":band=true;break;
+  case "Ubro":band=true;break;
+  case "New Balnace":band=true;break;
+  case"Mizubo":band=true;break;          
         }
+        
         return band;
     }
 }

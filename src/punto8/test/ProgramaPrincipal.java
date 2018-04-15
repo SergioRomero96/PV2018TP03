@@ -32,11 +32,12 @@ public class ProgramaPrincipal {
                 System.out.print("Ingrese el ISBN(978-950-####-##-#): 978-950-");
                 isbn = "978-950-"+scanner.next();
             }while(!isbn.matches("\\d{3}-\\d{3}-\\d{4}-\\d{2}-\\d{1}"));
+            //Método que se salta la lectura de n bytes del scanner.
             scanner.skip("\n");
             do{
                 System.out.print("Ingrese el Titulo(15 caracteres MAX): ");
                 titulo = scanner.nextLine();  
-            }while(titulo.isEmpty() || titulo.length() > 15);
+            }while(titulo.isEmpty()|| titulo.length() > 15);
             do{
                 System.out.print("Ingrese el Autor(15 caracteres MAX): ");
                 autor = scanner.nextLine(); 
@@ -51,7 +52,7 @@ public class ProgramaPrincipal {
             System.out.print("\nDesea Continuar S/N?: ");
             resp = scanner.next().charAt(0);
         }while(resp != 'N');
-        
         gestor.mostrarLibros(gestor.getLista());
+       gestor.buscarLibro();
     }
 }
