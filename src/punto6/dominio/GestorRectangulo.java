@@ -3,7 +3,7 @@ package punto6.dominio;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//se define el gestorde recatangulos
 public class GestorRectangulo {
     ArrayList<TablaRectangulo> lista =new ArrayList();
 
