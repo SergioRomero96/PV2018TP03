@@ -9,6 +9,7 @@ import punto8.dominio.Libro;
 
 
 public class BusquedaLibro {
+    //atributos de la clase
     private Libro libro;
     private String categoria;
 
@@ -35,9 +36,10 @@ public class BusquedaLibro {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-    
+    //metodo para buscar por diferentes opciones
     public void buscarLibro(ArrayList<NuevoLibro> lista){
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); 
+        //opciones para buscar
         System.out.println("\n1-Buscar por Categoria");
         System.out.println("2-Buscar por Titulo");
         System.out.println("3-Buscar por Categoria y Titulo");
@@ -52,7 +54,7 @@ public class BusquedaLibro {
             default: System.out.println("OPCION INCORRECTA...");
         }
     }
-    
+    //metodo para buscar por categoria
     public void buscarPorCategoria(ArrayList<NuevoLibro> lista){
         Scanner input = new Scanner(System.in);
         System.out.print("Ingrese la categoria: ");
@@ -74,7 +76,7 @@ public class BusquedaLibro {
         if(encontrado == false)
             System.out.println("\nNo se encontro el Libro...");
     }
-    
+    //metodo para buscar por titulo
     public void buscarPorTitulo(ArrayList<NuevoLibro> lista){
         Scanner input = new Scanner(System.in);
         System.out.print("Ingrese el titulo: ");
@@ -96,7 +98,7 @@ public class BusquedaLibro {
         if(encontrado == false)
             System.out.println("\nNo se encontro el Libro...");
     }
-    
+    //metodo para buscar por titulo y categoria
     public void buscarPorCategoriayTitulo(ArrayList<NuevoLibro> lista){
         Scanner input = new Scanner(System.in);
         System.out.print("\nIngrese la categoria: ");
@@ -121,7 +123,7 @@ public class BusquedaLibro {
         if(encontrado == false)
             System.out.println("\nNo se encontro el Libro...");
     }
-    
+    //metodo para buscar por autor
     public void buscarPorAutor(ArrayList<NuevoLibro> lista){
         Scanner input = new Scanner(System.in);
         System.out.print("Ingrese el Autor: ");

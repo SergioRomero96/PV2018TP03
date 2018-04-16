@@ -25,19 +25,27 @@ public class Venta {
     public void setLista(ArrayList<Detalle> lista) {
         this.lista = lista;
     }
-    
+    //metodo para cargar el producto mas la cantidad de cuota
     public void AgregarDetalle(Detalle detalle){
         lista.add(detalle);
     }
-    
+    //metodo para mostrar la tabla con los productos almacenados en la lista
     public void mostrarVenta(ArrayList<Detalle> lista){
-        System.out.println("\nCodigo\tNombre\t\tPrecioUnitario\tCuota\tPrecioEnCuota");
+        System.out.println("\nCodigo\tNombre\t\tPrecioUnitario\t\tCuota\tPrecioEnCuota");
         System.out.println("---------------------------------------------------------------------");
         for(Detalle objDetalle : lista){
             System.out.println(objDetalle.getUnProducto().getCodigo()+"\t"+objDetalle.getUnProducto().getNombre()+"\t\t"+
                     objDetalle.getUnProducto().getPrecioUnitario()+"\t\t"+objDetalle.getCuota()+"\t"+objDetalle.getPrecioTotal());
         }
         System.out.println("");
+    }
+    
+    public double totalAPagar(ArrayList<Detalle> lista){
+        double total = 0;
+        for(Detalle objDetalle : lista){
+            total += objDetalle.getPrecioTotal();
+        }
+        return total;
     }
     
 }

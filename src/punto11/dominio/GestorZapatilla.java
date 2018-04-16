@@ -1,7 +1,6 @@
 
 package punto11.dominio;
 
-import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -48,9 +47,9 @@ public class GestorZapatilla {
         double num;
         //el bucle repetira asta que el usuario no quiere cargar mas zapatillas
         do{
-        System.out.println("Marcas originales");
+        System.out.println("\nMarcas originales");
         opcionesDeZapatillasOriginales();
-        System.out.println("Ingrese la marca de la zapatilla");
+        System.out.println("\nIngrese la marca de la zapatilla");
         marcas=scanner.nextLine();
         System.out.println("Ingrese el numero de la zapatilla");
         num=scanner.nextDouble();
@@ -63,33 +62,33 @@ public class GestorZapatilla {
          cargarLista(z1);
          System.out.println("Dese seguir cargando S/N");
          op=scanner.next().charAt(0);
+         scanner.skip("\n");
         }while(op!='N');
     }
     //marcas originales de zapatillas
     public void opcionesDeZapatillasOriginales(){
-        System.out.println("Marcas originales");
-        System.out.println("Lqs Sporty");
+        System.out.println("Nike");
+        System.out.println("Puma");
         System.out.println("Reebok");
         System.out.println("Olympia");
         System.out.println("Ubro");
         System.out.println("New Balance");
-        System.out.println("Mizubo");
+        System.out.println("Mizuno");
+        System.out.println("Adidas");
     }
+    
     public boolean verificarVOF(String buscar){
-       boolean band=false;
+        boolean band=false;
         switch(buscar){
-  case "Adidas":
-                 band=true;break;
-  case "Nike":
-                band=true;break;
-  case "Lqs Sporty":band=true;
-  case "Reebok":band=true;break;
-  case "Olympia":band=true;break;
-  case "Ubro":band=true;break;
-  case "New Balance":band=true;break;
-  case"Mizubo":band=true;break;          
+            case "Adidas": band = true; break;
+            case "Nike": band = true; break;
+            case "Puma": band = true; break;
+            case "Reebok": band = true; break;
+            case "Olympia": band = true; break;
+            case "Ubro": band = true; break;
+            case "New Balance": band = true; break;
+            case"Mizuno":band=true; break;          
         }
-        
         return band;
     }
 }

@@ -31,18 +31,19 @@ public class ProgramaPrincipal {
             System.out.print("Ingrese el Precio Unitario: ");
             double precioUnitario = input.nextDouble();
             Producto objProducto = new Producto(codigo, nombre, precioUnitario);
-            objProducto.mostrarProducto();
+            objProducto.mostrarProducto();//se muestra el producto
             System.out.print("\nIngrese la cantidad de cuotas a pagar: ");
             int cuotas = input.nextInt();
-            double precioTotal = Detalle.calcularPrecioTotal(precioUnitario, cuotas);
-            Detalle detalle = new Detalle(objProducto, cuotas, precioTotal);
-            objVenta.AgregarDetalle(detalle);
+            double precioTotal = Detalle.calcularPrecioTotal(precioUnitario, cuotas);//se calcula el precio en cuotas
+            Detalle detalle = new Detalle(objProducto, cuotas, precioTotal);// se carga el constructor con parametros del detalle
+            objVenta.AgregarDetalle(detalle);//se agrega el detalle de la forma de pago
             
             System.out.print("\nDesea Continuar? S/N: ");
             resp = input.next().charAt(0);
         }while(resp != 'N');
         
-        objVenta.mostrarVenta(objVenta.getLista());
+        objVenta.mostrarVenta(objVenta.getLista());//se muestra la lista de producto incluido la cantidad de cuotas
+        System.out.println("\nTotal a Pagar: " + objVenta.totalAPagar(objVenta.getLista()));//se muestra la suma total a pagar por los productos
     }
 
 }

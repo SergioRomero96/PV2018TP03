@@ -31,6 +31,33 @@ public class ArregloNumero {
     public void mostrarElementosDelArreglo(){
         for(int i = 0; i < numeros.length; i++)
             System.out.println("Valor de elemento: "+numeros[i]);
-            }
+    }
     
+    public void mostrarMayorMenor(){
+        boolean band = true;
+        int min = 0;
+        int max = 0;
+        for(int i = 0; i < numeros.length; i++){
+            if(band){
+                min=numeros[i];
+                max=numeros[i];
+                band = false;
+            }
+            else{
+                if(numeros[i] < min)
+                    min = numeros[i];
+                else if (numeros[i] > max)
+                    max = numeros[i];
+            }
+        }
+        System.out.println("\nEl Mayor es: " + max);
+        System.out.println("El Menor es: " + min);
+    }
+    
+    public double obtenerPromedio(){
+        int suma = 0;
+        for(int i = 0; i < numeros.length; i++)
+            suma +=numeros[i];
+        return (double)suma /numeros.length;
+    }
 }

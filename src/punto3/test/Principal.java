@@ -24,7 +24,7 @@ public class Principal {
             System.out.println("ES UN TRIANGULO");
             System.out.println("el perimetro es:" + triangulo.obtenerPerimetro());
         } else {
-            System.out.println("Deve ingresar datos validos");
+            System.out.println("No es un TRIANGULO\nDebe ingresar datos validos");
         }
 
     }

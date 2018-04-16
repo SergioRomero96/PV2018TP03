@@ -32,9 +32,10 @@ public class BusquedaLibros {
     }
     
     public void buscarLibro(ArrayList<Libro> libros, String titulo){
-        boolean encontrado = false;
+        boolean encontrado = false; //variable para determinar si se encontro el libro
         for(Libro objLibro : libros){
-            if( objLibro.getTitulo().equalsIgnoreCase(titulo)){
+            if( objLibro.getTitulo().equalsIgnoreCase(titulo)){//compara el titulo a buscar con los titulos de los libros almacenados
+                //muestra los datos de los libros encontrados
                 System.out.println("----------------------------------");
                 System.out.println("ISBN: " + objLibro.getISBN());
                 System.out.println("Titulo: " + objLibro.getTitulo());
@@ -45,7 +46,7 @@ public class BusquedaLibros {
                 //break;
             }   
         }
-        if(encontrado == false)
+        if(encontrado == false)//en caso de no encontrar el libro
             System.out.println("\nNo se encontro el Libro...");
     }
     

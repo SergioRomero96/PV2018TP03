@@ -45,12 +45,12 @@ public class ProgramaPrincipal {
             
             System.out.println("Categorias: ");
             for(String cadena : categorias){
-                System.out.println("\t"+cadena);
+                System.out.println("\t"+cadena);//se muestra la lista de categorias disponibles
             }
             boolean band = false;
             do{
                 System.out.print("Ingrese una categoria: ");
-                categoria = scanner.next();
+                categoria = scanner.next(); // se elige una de esas categorias
                 for (String categoria1 : categorias) {
                     if(categoria1.equals(categoria)){
                         band = true;
@@ -58,16 +58,14 @@ public class ProgramaPrincipal {
                     }
                         
                 }
-            }while(band == false);
-            
-            
+            }while(band == false);// se controla que el usuario haya elegido una categoria de esa lista
             
             NuevoLibro objLibro = new NuevoLibro(isbn, titulo, autor, precio, categoria); //obj libro es n 
-            lista.add(objLibro); //agrego a la lista los objetos
+            lista.add(objLibro); //agrego a la lista los objetos del Nuevo libro
             System.out.print("\nDesea Continuar S/N?: ");
             resp = scanner.next().charAt(0);
         }while(resp != 'N');
         scanner.skip("\n");
-        objBusqueda.buscarLibro(lista);
+        objBusqueda.buscarLibro(lista);//se realiza la busqueda
     }
 }

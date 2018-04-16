@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class GestorCirculo {
 //se define una lista de Ciruclo
     ArrayList<Circulo> list =new ArrayList();
+    
     public void agregarCirculo(Circulo circulo){
         this.list.add(circulo);
     }
@@ -18,6 +19,7 @@ public class GestorCirculo {
     public void setList(ArrayList<Circulo> list) {
         this.list = list;
     }
+    
     public double calcularSuperficie(double r){
         double s;
         s=Math.pow(r, 2)*Math.PI;

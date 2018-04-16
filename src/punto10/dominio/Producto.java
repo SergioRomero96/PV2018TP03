@@ -11,14 +11,15 @@ package punto10.dominio;
  * @author Sergio Romero
  */
 public class Producto {
+    //atributos de la clase
     private int codigo;
     private String nombre;
     private double precioUnitario;
-    
+    //constructor por defecto
     public Producto(){
         
     }
-
+    //constructor con parametros
     public Producto(int codigo, String nombre, double precioUnitario) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -48,7 +49,7 @@ public class Producto {
     public void setPrecioUnitario(double precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
-    
+    //metodo para mostrar datos del producto
     public void mostrarProducto(){
         System.out.println("\n-----------------------");
         System.out.println("Codigo: " + this.codigo);

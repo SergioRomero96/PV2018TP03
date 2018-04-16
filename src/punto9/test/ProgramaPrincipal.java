@@ -17,9 +17,9 @@ import punto9.dominio.BusquedaLibros;
  */
 public class ProgramaPrincipal {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        BusquedaLibros objBusqueda = new BusquedaLibros();
-        GestorLibros objGestor = new GestorLibros();
+        Scanner scanner = new Scanner(System.in);//objeto para leer datos por teclado
+        BusquedaLibros objBusqueda = new BusquedaLibros();//objeto para buscar libros
+        GestorLibros objGestor = new GestorLibros();//objeto para almacenar, mostrar..etc los libros 
         int i = 0;
         String isbn;
         String titulo;
@@ -48,16 +48,16 @@ public class ProgramaPrincipal {
                 precio = scanner.nextDouble();  
             }while(precio <= 0);
             
-            Libro objLibro = new Libro(isbn, titulo, autor, precio); //obj libro es n 
-            objGestor.agregarLibro(objLibro); //agrego a la lista los objetos
+            Libro objLibro = new Libro(isbn, titulo, autor, precio); //se crea un objeto libro
+            objGestor.agregarLibro(objLibro); //se agrega a la lista los objetos libros
             System.out.print("\nDesea Continuar S/N?: ");
             resp = scanner.next().charAt(0);
         }while(resp != 'N');
         scanner.skip("\n");
         
         System.out.print("\nIngrese el titulo del libro a buscar: ");       
-        objBusqueda.setTitulo(scanner.nextLine());
-        objBusqueda.buscarLibro(objGestor.getLista(), objBusqueda.getTitulo());
+        objBusqueda.setTitulo(scanner.nextLine());//se ingresa el titulo del libro a buscar
+        objBusqueda.buscarLibro(objGestor.getLista(), objBusqueda.getTitulo());//se pasa por parametro la lista, y el titulo del libro
         
     }
 }

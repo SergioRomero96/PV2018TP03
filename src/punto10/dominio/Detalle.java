@@ -11,14 +11,15 @@ package punto10.dominio;
  * @author Sergio Romero
  */
 public class Detalle {
+    //atributos de la clase
     private Producto unProducto;
     private int cuota ;
     private double precioTotal;
-
+    //constructor por defecto
     public Detalle(){
         
     }
-    
+    //constructor con parametros
     public Detalle(Producto unProducto, int cuota, double precioTotal) {
         this.unProducto = unProducto;
         this.cuota = cuota;
@@ -48,7 +49,7 @@ public class Detalle {
     public void setPrecioTotal(double precioTotal) {
         this.precioTotal = precioTotal;
     }
-    
+    //metodo estatico de la clase para calcular el precio en cuotas
     public static double calcularPrecioTotal(double precioUnitario, int cantidadCuota){
         double cuota = precioUnitario / cantidadCuota;
         double porcentaje;

@@ -13,11 +13,13 @@ import punto1.dominio.Punto;
  * @author Sergio Romero
  */
 public class Rectangulo {
+    //atributos de la clase rectangulo
     private Punto punto1;
     private double base;
     private double altura;
-
-     public void mostrarPuntos(){
+    
+    //metodo para mostrar los puntos restantes del rectangulo
+    public void mostrarPuntos(){
         Punto punto2 = new Punto();
         Punto punto3 = new Punto();
         Punto punto4 = new Punto();
@@ -35,10 +37,11 @@ public class Rectangulo {
 
     }
     
+    //metodo para obtener la superficie
     public double obtenerSuperficie(){
         return base * altura;
     } 
-    
+    //metodo para obtener el perimetro
     public double obtenerPerimetro(){
         return 2 * base + 2 * altura;
     }

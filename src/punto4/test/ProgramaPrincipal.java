@@ -23,7 +23,9 @@ public class ProgramaPrincipal {
             arreglo.getNumeros()[contador] = scanner.nextInt();
             contador++;
         }
-        System.out.println("Se mostrara el arreglo");
+        System.out.println("\nSe mostrara el arreglo");
         arreglo.mostrarElementosDelArreglo();
+        arreglo.mostrarMayorMenor();
+        System.out.println("El Promedio es: " + arreglo.obtenerPromedio());
     }
 }

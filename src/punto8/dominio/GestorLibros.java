@@ -7,7 +7,6 @@
 package punto8.dominio;
 
 import java.util.ArrayList;
-import punto12.dominio.NuevoLibro;
 
 /**
  * 
@@ -16,10 +15,11 @@ import punto12.dominio.NuevoLibro;
 public class GestorLibros {
     private ArrayList<Libro> lista = new ArrayList();
     
+    //agrega objetos libro al arraylist
     public void agregarLibro(Libro libro){
         this.lista.add(libro);
     }
-
+    //muestra los libros en formato tabla
     public void mostrarLibros(ArrayList<Libro> list){
         System.out.println("\nISBN\t\t\tTitulo\t\t\tAutor\t\t\tPrecio");
         System.out.println("---------------------------------------------------------------------------------------");

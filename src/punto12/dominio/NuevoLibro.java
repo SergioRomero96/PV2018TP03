@@ -12,12 +12,13 @@ import punto8.dominio.Libro;
  * 
  * @author Sergio Romero
  */
-public class NuevoLibro extends Libro{
-    private String categoria;
-
+public class NuevoLibro extends Libro{//se crea una nueva clase libro que hereda los atributos de la clase libro
+    private String categoria;//se incluye el atributo categoria
+    
+    //constructor por defecto
     public NuevoLibro() {
     }
-
+    //constructor con parametros
     public NuevoLibro(String ISBN, String titulo, String autor, double precio, String categoria) {
         super(ISBN, titulo, autor, precio);
         this.categoria = categoria;
