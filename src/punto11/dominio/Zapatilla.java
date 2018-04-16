@@ -3,18 +3,12 @@ package punto11.dominio;
 
 
 public class Zapatilla {
+//se definen los atributos de zapatilla
     private String marca;
      private double numero;
     private String color;
     private String tipo;
-
-    public Zapatilla(double numero, String marca, String color, String tipo) {
-        this.numero = numero;
-        this.marca = marca;
-        this.color = color;
-        this.tipo = tipo;
-    }
-
+//se define el constructor 
     public Zapatilla(String marca, double numero, String color, String tipo) {
         this.marca = marca;
         this.numero = numero;

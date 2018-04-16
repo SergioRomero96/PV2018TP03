@@ -1,20 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package punto11.test;
 
 import punto11.dominio.GestorZapatilla;
 
-/**
- *
- * @author LENOVO
- */
 public class Principal {
     public static void main(String[] args) {
+     //se llama a la clase GestorZapatilla 
         GestorZapatilla gestor =new GestorZapatilla();
+        //se solicita al metodo cargar el cual permite la carga de datos
         gestor.cargarZapatallias();
+        //muestra por pantalla los datos cargados
         gestor.mostarLista(gestor.getLista());
     }
 }

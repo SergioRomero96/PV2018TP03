@@ -4,26 +4,22 @@ package punto5.dominio;
 
 
 public class Circulo {
+    //se definen los atributos de Circulo
    private double radio;
    private String color;
    private double superficie;
-
+   //se define el constructor
+     public Circulo(double radio, String color, double superficie) {
+        this.radio = radio;
+        this.color = color;
+        this.superficie = superficie;
+    }
     public double getSuperficie() {
         return superficie;
     }
 
     public void setSuperficie(double superficie) {
         this.superficie = superficie;
-    }
-
-    public Circulo(double radio, String color, double superficie) {
-        this.radio = radio;
-        this.color = color;
-        this.superficie = superficie;
-    }
-    public Circulo(double radio, String color) {
-        this.radio = radio;
-        this.color = color;
     }
 
     public double getRadio() {

@@ -3,12 +3,13 @@ package punto7.dominio;
 
 
 public class Autos {
+    //se definen los atributos 
     private String patente;
     private String marca;
     private int modelo;
     private String color;
     private String combustible;             
-    
+    //se define el constructor
     public Autos(String patente,String marca, int modelo, String color, String combustible) {
         this.patente = patente;
         this.marca=marca;
