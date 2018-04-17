@@ -14,25 +14,6 @@ public class GestorZapatilla {
     public void cargarLista(Zapatilla zapatilla){
         this.lista.add(zapatilla);
     }
-    //el metodo permite mostrar los objetos almacenados en la lista
-    public void mostarLista(ArrayList<Zapatilla> lista){
-        int i=0;String verifica;boolean bandera;String original;
-        //con \t\t permite realizar tabulacion
-        System.out.println("\nN°\t\tMARCA\t\tNUMERO\t\tCOLOR\t\tTipo\t\tORIGINAL O COPIA");
-        //recorrera todo lo que contiene la lista
-        for(Zapatilla z:lista){
-            verifica=z.getMarca();
-            //verifica si la marca de zapatilla es original
-        bandera=verificarVOF(verifica);
-        if(bandera==true){
-            original="Original";
-        }else{
-            original="Copia";
-        }
-            System.out.println(i+"\t\t"+z.getMarca()+"\t\t"+z.getNumero()+"\t\t"+z.getColor()+"\t\t"+z.getTipo()+"\t\t"+original);
-        i++;
-        }
-    }
     public ArrayList<Zapatilla> getLista() {
         return lista;
     }
@@ -40,56 +21,47 @@ public class GestorZapatilla {
     public void setLista(ArrayList<Zapatilla> lista) {
         this.lista = lista;
     }
-    //el metodo permite la carga de los datos de zapatillas
-    public void cargarZapatallias(){
+    //el metodo permite mostrar los objetos almacenados en la lista
+    public void mostarLista(ArrayList<Zapatilla> lista){
+        int i=0;boolean bandera;
+        //con \t\t permite realizar tabulacion
+        System.out.println("\nN°\tMARCA\t\t\tNUMERO\t\tCOLOR\t\tTipo\t\tORIGINAL O COPIA");
+        //recorrera todo lo que contiene la lista
+        for(Zapatilla z:lista){
+            System.out.println(i+"\t"+z.getMarca()+"\t\t\t"+z.getNumero()+"\t\t"+z.getColor()+"\t\t"+z.getTipo()+"\t\t"+z.getInformacion());
+        i++;
+        }
+    }
+    /**el metodo permite la carga de los datos de zapatillas
+      la marca
+      * el numero de zapatilla
+      * color de zapatilla
+      * tipo de zapatilla
+      * original o replica
+    **/    
+public void cargarZapatallias(){
         Scanner scanner=new Scanner(System.in);
-        String marcas,color,tipo;char op;
+        String marcas,color,tipo,verificador;char op;
         double num;
         //el bucle repetira asta que el usuario no quiere cargar mas zapatillas
+       
         do{
-        System.out.println("\nMarcas originales");
-        opcionesDeZapatillasOriginales();
-        System.out.println("\nIngrese la marca de la zapatilla");
-        marcas=scanner.nextLine();
-        System.out.println("Ingrese el numero de la zapatilla");
-        num=scanner.nextDouble();
-        System.out.println("Ingrese el color de la zapatilla");
-        color=scanner.next();
-        System.out.println("Ingrese el tipo de zapatilla");
-        scanner.skip("\n");
-        tipo=scanner.nextLine();
-         Zapatilla z1=new Zapatilla(marcas,num,color,tipo);
-         cargarLista(z1);
-         System.out.println("Dese seguir cargando S/N");
-         op=scanner.next().charAt(0);
-         scanner.skip("\n");
+            System.out.println("\nIngrese la marca de la zapatilla");
+            marcas=scanner.nextLine(); 
+            System.out.println("Ingrese el numero de la zapatilla");
+            num=scanner.nextDouble();
+            System.out.println("Ingrese el color de la zapatilla");
+            color=scanner.next().toLowerCase(); 
+            System.out.println("Ingrese el tipo de zapatilla");
+            tipo=scanner.next().toLowerCase(); 
+            System.out.println("Ingrese si la zapatilla es replica o  es original");
+            verificador=scanner.next().toLowerCase();
+            Zapatilla z1=new Zapatilla(marcas,num,color,tipo,verificador);
+            cargarLista(z1);
+            System.out.println("Dese seguir cargando S/N");
+            op=scanner.next().charAt(0);
+            scanner.skip("\n");
         }while(op!='N');
-    }
-    //marcas originales de zapatillas
-    public void opcionesDeZapatillasOriginales(){
-        System.out.println("Nike");
-        System.out.println("Puma");
-        System.out.println("Reebok");
-        System.out.println("Olympia");
-        System.out.println("Ubro");
-        System.out.println("New Balance");
-        System.out.println("Mizuno");
-        System.out.println("Adidas");
-    }
-    
-    public boolean verificarVOF(String buscar){
-        boolean band=false;
-        switch(buscar){
-            case "Adidas": band = true; break;
-            case "Nike": band = true; break;
-            case "Puma": band = true; break;
-            case "Reebok": band = true; break;
-            case "Olympia": band = true; break;
-            case "Ubro": band = true; break;
-            case "New Balance": band = true; break;
-            case"Mizuno":band=true; break;          
-        }
-        return band;
     }
 }
 

@@ -1,6 +1,9 @@
 
 package punto7.dominio;
-
+/**
+ *
+ * @author LENOVO
+ */
 
 public class Autos {
     //se definen los atributos 
@@ -17,7 +20,7 @@ public class Autos {
         this.color = color;
         this.combustible = combustible;
     }
-
+//se definen los get y set de los atributos
     public String getMarca() {
         return marca;
     }
@@ -58,11 +61,5 @@ public class Autos {
     public void setCombustible(String combustible) {
         this.combustible = combustible;
     }
-    public void mostrar(){
-        System.out.println("Patente:"+getPatente());
-        System.out.println("Marca:"+getMarca());
-        System.out.println("Modelo:"+getModelo());
-        System.out.println("Color:"+getColor());
-        System.out.println("Combustible:"+getCombustible());
-    }
+  
 }

@@ -2,13 +2,17 @@
 
 package punto5.dominio;
 
-
+/**
+ *
+ * @author LENOVO
+ */
 public class Circulo {
     //se definen los atributos de Circulo
    private double radio;
    private String color;
    private double superficie;
    //se define el constructor
+   
      public Circulo(double radio, String color, double superficie) {
         this.radio = radio;
         this.color = color;

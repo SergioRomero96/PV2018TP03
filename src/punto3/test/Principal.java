@@ -1,5 +1,8 @@
 package punto3.test;
-
+/**
+ *
+ * @author LENOVO
+ */
 import java.util.Scanner;
 import punto3.dominio.Triangulo;
 

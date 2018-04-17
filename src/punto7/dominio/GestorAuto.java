@@ -1,9 +1,13 @@
 
 package punto7.dominio;
-
+/**
+ *
+ * @author LENOVO
+ */
 import java.util.Scanner;
 
 public class GestorAuto {
+    // se define un atributo tipo arreglo de Autos
     private Autos[] vector;
 // cantidad de autos que se carga
     public GestorAuto(int a){
@@ -24,6 +28,7 @@ public class GestorAuto {
        Autos auto4=new Autos("A0087","Nisan",2010,"Azul","Super"); 
        Autos auto5=new Autos("A04863","BMW",2018,"Azul","Infinia");
        Autos auto6=new Autos("AB558","Bentley",2016,"Gris","Diese");
+    //se cargaran los objetos a la lista
        vector[0]=auto1;
        vector[1]=auto2;
        vector[2]=auto3;
@@ -36,7 +41,8 @@ public class GestorAuto {
          int i=0;
          System.out.println("\nN°\tPATENTE\t\tMARCA\t\tMODELO\t\tCOLOR\t\tCOMBUSTIBLE");
           System.out.println("---------------------------------------------------------------------------------------------------");
-        for(Autos a:vector){
+        
+          for(Autos a:vector){
             System.out.println(i+"\t"+a.getPatente()+"\t\t"+a.getMarca()+"\t\t"+a.getModelo()+"\t\t"+a.getColor()+"\t\t"+a.getCombustible());
             i++;
         }
@@ -56,29 +62,42 @@ public class GestorAuto {
            int opc;
            System.out.println("Ingrese el numero de auto que desea cambiar:");
         int nauto=input.nextInt();
-        do{
+           if(nauto<6){
+     do{
             mostrarOpciones();
             System.out.println("Ingrese una opc:");
              opc=input.nextInt();
-        switch(opc){
+   
+       switch(opc){
          //segun la opcion ingresada por el usuario se realizara un cambio
    case 1:System.out.println("Ingrese la nueva patente:");String pat=input.next();
         vector[nauto].setPatente(pat);break;
+        
    case 2:System.out.println("Ingrese la nueva marca:");String mar=input.next();
           vector[nauto].setMarca(mar);break;   
+   
    case 3:System.out.println("Ingrese el nuevo modelo:");int mode=input.nextInt();
          vector[nauto].setModelo(mode);break;
+   
    case 4: System.out.println("Ingrese el nuevo color:");String col=input.next();
         vector[nauto].setColor(col);break;
+   
    case 5:
         System.out.println("Ingrese el nuevo combustible");String com=input.next();
         vector[nauto].setCombustible(com);
+   
    case 6:
         System.out.println("Fin de cambios");
+   
    default:
         System.out.println("Deve ingresar datos validos");
-        }
-        }while(opc!=6);
+       }
+       
+    }while(opc!=6);
        mostrar();
-       } 
+       }
+           else{
+               System.out.println("Deve ingresar un numero de auto valido");
+           }
+       }
 }

@@ -1,14 +1,17 @@
 
 package punto6.dominio;
-
-
+/**
+ *
+ * @author LENOVO
+ */
+//se definen los atributos
 public class TablaRectangulo {
    private double base;
    private double altura;
    private double punto;
    private double superficie;
    private double perimetro;
-
+//se define el constructor
     public TablaRectangulo(double base, double altura, double punto, double superficie, double perimetro) {
         this.base = base;
         this.altura = altura;
@@ -16,7 +19,7 @@ public class TablaRectangulo {
         this.superficie = superficie;
         this.perimetro = perimetro;
     }
-
+//se definene los get y set de los atributos
     public double getBase() {
         return base;
     }

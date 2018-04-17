@@ -1,6 +1,9 @@
 
 package punto5.dominio;
-
+/**
+ *
+ * @author LENOVO
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 

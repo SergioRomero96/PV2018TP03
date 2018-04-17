@@ -1,21 +1,34 @@
 
 package punto11.dominio;
-
+/**
+ *
+ * @author LENOVO
+ */
 
 public class Zapatilla {
 //se definen los atributos de zapatilla
     private String marca;
-     private double numero;
+    private double numero;
     private String color;
     private String tipo;
+    private String informacion;
 //se define el constructor 
-    public Zapatilla(String marca, double numero, String color, String tipo) {
+    public Zapatilla(String marca, double numero, String color, String tipo, String informacion) {
         this.marca = marca;
         this.numero = numero;
         this.color = color;
         this.tipo = tipo;
+        this.informacion = informacion;
     }
 
+    public String getInformacion() {
+        return informacion;
+    }
+
+    public void setInformacion(String informacion) {
+        this.informacion = informacion;
+    }
+      
     public double getNumero() {
         return numero;
     }
