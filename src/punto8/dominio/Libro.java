@@ -11,51 +11,77 @@ package punto8.dominio;
  * @author Sergio Romero
  */
 public class Libro {
-    //atributos de la clase
+    /**
+     * atributos de la clase
+     */
     private String ISBN;
     private String titulo;
     private String autor;
     private double precio;
     
-    //constructor por defecto
+    /**
+     * constructor por defecto
+     */
     public Libro(){
     }
-    //constructor con parametros
+    /**
+     * constructor con parametros
+     * @param ISBN se le asigna al atributo ISBN del libro
+     * @param titulo se le asigna al atributo titulo del libro
+     * @param autor se le asigna al atributo autor del libro
+     * @param precio se le asigna al atributo precio del libro
+     */
     public Libro(String ISBN, String titulo, String autor, double precio) {
         this.ISBN = ISBN;
         this.titulo = titulo;
         this.autor = autor;
         this.precio = precio;
     }
-    //metodos getter y setter de la clase
+    /**
+     * @return el valor del ISBN de la clase libro
+     */
     public String getISBN() {
         return ISBN;
     }
-
+    /**
+     * @param ISBN se le asigna al atributo ISBN de la clase Libro
+     */
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
-
+    /**
+     * @return el valor del titulo de la clase Libro
+     */
     public String getTitulo() {
         return titulo;
     }
-
+    /**
+     * @param titulo se le asigna al atributo titulo de la clase Libro
+     */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-
+    /**
+     * @return el valor del autor de la clase Libro
+     */
     public String getAutor() {
         return autor;
     }
-
+    /**
+     * @param autor se le asigna al atributo autor de la clase Libro
+     */
     public void setAutor(String autor) {
         this.autor = autor;
     }
-
+    /**
+     * @return el valor del precio de la clase Libro
+     */
     public double getPrecio() {
         return precio;
     }
-
+    /**
+     * @param precio se le asigna al atributo precio de la clase Libro
+     */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
