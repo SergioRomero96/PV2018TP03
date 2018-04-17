@@ -1,6 +1,6 @@
 package punto3.dominio;
 /**
- *
+ *..
  * @author LENOVO
  */
 
