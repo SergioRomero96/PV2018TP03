@@ -6,10 +6,8 @@
 
 package punto10.test;
 
-import java.util.Scanner;
-import punto10.dominio.Detalle;
 import punto10.dominio.Producto;
-import punto10.dominio.Venta;
+import punto10.utils.GestorProductos;
 
 /**
  * 
@@ -17,33 +15,15 @@ import punto10.dominio.Venta;
  */
 public class ProgramaPrincipal {
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        Venta objVenta = new Venta();
-        int i = 0;
-        char resp;
-        do{
-            System.out.println("Producto N° " + (++i));
-            System.out.print("Ingrese el codigo: ");
-            int codigo = input.nextInt();
-            input.skip("\n");
-            System.out.print("Ingrese el Nombre + Marca: ");
-            String nombre = input.nextLine();
-            System.out.print("Ingrese el Precio Unitario: ");
-            double precioUnitario = input.nextDouble();
-            Producto objProducto = new Producto(codigo, nombre, precioUnitario);
-            objProducto.mostrarProducto();//se muestra el producto
-            System.out.print("\nIngrese la cantidad de cuotas a pagar: ");
-            int cuotas = input.nextInt();
-            double precioTotal = Detalle.calcularPrecioTotal(precioUnitario, cuotas);//se calcula el precio en cuotas
-            Detalle detalle = new Detalle(objProducto, cuotas, precioTotal);// se carga el constructor con parametros del detalle
-            objVenta.AgregarDetalle(detalle);//se agrega el detalle de la forma de pago
-            
-            System.out.print("\nDesea Continuar? S/N: ");
-            resp = input.next().charAt(0);
-        }while(resp != 'N');
+        GestorProductos objGestor = new GestorProductos();
         
-        objVenta.mostrarVenta(objVenta.getLista());//se muestra la lista de producto incluido la cantidad de cuotas
-        System.out.println("\nTotal a Pagar: " + objVenta.totalAPagar(objVenta.getLista()));//se muestra la suma total a pagar por los productos
+        Producto producto;
+        objGestor.agregarProducto(producto = new Producto(100, "Mouse Sharknet", 120.0, 6));
+        objGestor.agregarProducto(producto = new Producto(101, "Teclado Genius", 320.0, 6));
+        objGestor.agregarProducto(producto = new Producto(102, "Monitor LG 19' ", 1900.0, 12));
+        objGestor.agregarProducto(producto = new Producto(103, "Mouse HiperX", 1100.0, 6));
+
+        objGestor.mostrarProductos();
     }
 
 }
