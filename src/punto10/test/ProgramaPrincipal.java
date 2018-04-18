@@ -22,7 +22,7 @@ public class ProgramaPrincipal {
         objGestor.agregarProducto(new Producto(102, "Monitor LG 19' ", 1900.0, 12));
         objGestor.agregarProducto(new Producto(103, "Mouse HiperX", 1100.0, 6));
 
-        objGestor.mostrarProductos();
+        objGestor.mostrarProductos();//se muestra los productos almacenados
     }
 
 }
