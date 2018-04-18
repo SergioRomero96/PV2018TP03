@@ -16,12 +16,11 @@ import punto10.utils.GestorProductos;
 public class ProgramaPrincipal {
     public static void main(String[] args){
         GestorProductos objGestor = new GestorProductos();
-        
-        Producto producto;
-        objGestor.agregarProducto(producto = new Producto(100, "Mouse Sharknet", 120.0, 6));
-        objGestor.agregarProducto(producto = new Producto(101, "Teclado Genius", 320.0, 6));
-        objGestor.agregarProducto(producto = new Producto(102, "Monitor LG 19' ", 1900.0, 12));
-        objGestor.agregarProducto(producto = new Producto(103, "Mouse HiperX", 1100.0, 6));
+        //se cargan 4 productos que son almacenados en una lista
+        objGestor.agregarProducto(new Producto(100, "Mouse Sharknet", 120.0, 6));
+        objGestor.agregarProducto(new Producto(101, "Teclado Genius", 320.0, 6));
+        objGestor.agregarProducto(new Producto(102, "Monitor LG 19' ", 1900.0, 12));
+        objGestor.agregarProducto(new Producto(103, "Mouse HiperX", 1100.0, 6));
 
         objGestor.mostrarProductos();
     }
