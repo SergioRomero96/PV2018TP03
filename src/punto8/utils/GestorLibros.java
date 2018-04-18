@@ -69,7 +69,7 @@ public class GestorLibros {
         System.out.println("\nISBN\t\t\tTitulo\t\t\t\tAutor\t\t\t\tPrecio");
         System.out.println("-------------------------------------------------------------------------------------------------------");
         for (Libro objLibro : getLista()){
-            System.out.println(objLibro.getISBN()+"\t"+objLibro.getTitulo()+"\t\t"+objLibro.getAutor()+"\t\t"+objLibro.getPrecio());
+            System.out.println(objLibro.getISBN()+"\t"+objLibro.getTitulo()+"\t\t"+objLibro.getAutor().getApelido()+" "+objLibro.getAutor().getNombre()+"\t\t"+objLibro.getPrecio());
         }
     }
     /**
@@ -86,7 +86,7 @@ public class GestorLibros {
                 System.out.println("\n----------------------------------");
                 System.out.println("ISBN: " + objLibro.getISBN());
                 System.out.println("Titulo: " + objLibro.getTitulo());
-                System.out.println("Autor: " + objLibro.getAutor());
+                System.out.println("Autor: " + objLibro.getAutor().getApelido()+" "+objLibro.getAutor().getNombre());
                 System.out.println("Precio: " + objLibro.getPrecio());
                 System.out.println("----------------------------------");
                 encontrado = true;
@@ -98,7 +98,7 @@ public class GestorLibros {
     }
     
     /**
-     * metodo para buscar por diferentes opciones
+     * metodo para buscar por diferentes opciones, autor o categoria
      */
     public void buscarLibro(){
         Scanner input = new Scanner(System.in); 
@@ -114,7 +114,9 @@ public class GestorLibros {
         }
     }
     /**
-     * metodo para buscar por categoria
+     * metodo para buscar una categoria ingresada y mostrar los datos
+     * de los libros que pertenecen a esa categoria.
+     * Caso contrario mostrara un mensaje que no se encontro el libro
      */
     public void buscarPorCategoria(){
         Scanner input = new Scanner(System.in);
@@ -123,7 +125,7 @@ public class GestorLibros {
         for(String categ : categorias){
             System.out.println(categ);
         }
-        boolean band = false;
+        boolean band = false; // bandera para determinar si se encontro el libro
         String categoria;
         do{
             System.out.print("\nIngrese la categoria: ");
@@ -143,7 +145,7 @@ public class GestorLibros {
                 System.out.println("----------------------------------");
                 System.out.println("ISBN: " + objLibro.getISBN());
                 System.out.println("Titulo: " + objLibro.getTitulo());
-                System.out.println("Autor: " + objLibro.getAutor());
+                System.out.println("Autor: " + objLibro.getAutor().getApelido()+" "+objLibro.getAutor().getNombre());
                 System.out.println("Precio: " + objLibro.getPrecio());
                 System.out.println("Categoria: " + objLibro.getCategoria());
                 System.out.println("----------------------------------");
@@ -157,19 +159,21 @@ public class GestorLibros {
  
 
     /**
-     * metodo para buscar por autor
+     * metodo para buscar por el apellido de un autor ingresado
+     * y mostrar los datos de los libro que pertenecen a ese autor.
+     * Caso contrario mostrara un mensaje que no se encontro el libro
      */
     public void buscarPorAutor(){
         Scanner input = new Scanner(System.in);
-        System.out.print("\nIngrese el Autor: ");
-        String autor = input.nextLine();
-        boolean encontrado = false;
+        System.out.print("\nIngrese el/los apellido/s del Autor: ");
+        String apellido = input.nextLine();
+        boolean encontrado = false; // bandera para determinar si se encontro el libro
         for(NuevoLibro objLibro : lista2){
-            if(objLibro.getAutor().equals(autor)){
+            if(objLibro.getAutor().getApelido().equals(apellido)){
                 System.out.println("----------------------------------");
                 System.out.println("ISBN: " + objLibro.getISBN());
                 System.out.println("Titulo: " + objLibro.getTitulo());
-                System.out.println("Autor: " + objLibro.getAutor());
+                System.out.println("Autor: " + objLibro.getAutor().getApelido()+" "+objLibro.getAutor().getNombre());
                 System.out.println("Precio: " + objLibro.getPrecio());
                 System.out.println("Categoria: " + objLibro.getCategoria());
                 System.out.println("----------------------------------");

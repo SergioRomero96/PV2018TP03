@@ -15,15 +15,17 @@ import punto4.dominio.ArregloNumero;
  */
 public class ProgramaPrincipal {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        ArregloNumero arreglo = new ArregloNumero();
+        Scanner scanner = new Scanner(System.in);//objeto para leer por teclado
+        ArregloNumero arreglo = new ArregloNumero();//objeto para almacenar un arreglo de numeros
         int contador = 0;
-        while(contador < 10){
+        
+        while(contador < 10){//se cargan los 10 numeros
             System.out.print("Ingrese un numero: ");
             arreglo.getNumeros()[contador] = scanner.nextInt();
             contador++;
         }
-        System.out.println("\nSe mostrara el arreglo");
+        //se muestra los numeros, el mayor, menor y el promedio
+        System.out.println("\nElementos  del arreglo");
         arreglo.mostrarElementosDelArreglo();
         arreglo.mostrarMayorMenor();
         System.out.println("El Promedio es: " + arreglo.obtenerPromedio());

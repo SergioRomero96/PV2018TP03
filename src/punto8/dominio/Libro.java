@@ -16,7 +16,7 @@ public class Libro {
      */
     private String ISBN;
     private String titulo;
-    private String autor;
+    private Autor autor;
     private double precio;
     
     /**
@@ -31,7 +31,7 @@ public class Libro {
      * @param autor se le asigna al atributo autor del libro
      * @param precio se le asigna al atributo precio del libro
      */
-    public Libro(String ISBN, String titulo, String autor, double precio) {
+    public Libro(String ISBN, String titulo, Autor autor, double precio) {
         this.ISBN = ISBN;
         this.titulo = titulo;
         this.autor = autor;
@@ -64,13 +64,13 @@ public class Libro {
     /**
      * @return el valor del autor de la clase Libro
      */
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
     /**
      * @param autor se le asigna al atributo autor de la clase Libro
      */
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
     /**
