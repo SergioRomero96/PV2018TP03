@@ -57,9 +57,9 @@ public class GestorProductos {
         double porcentaje;
         double total = 0;
         for(int i = 0; i<cantidadCuota; i++){
-            porcentaje = cuota * 1.5 / 100;
-            cuota = cuota + porcentaje;
-            total = total + cuota;
+            porcentaje = cuota * 1.5 / 100;//se obtiene el 1.5% de la cuota
+            cuota = cuota + porcentaje;//se le suma el 1.5% a una cuota
+            total = total + cuota;//se acumulan las cuotas + el 1.5%
         }
         return total;
     }
