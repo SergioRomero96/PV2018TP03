@@ -2,70 +2,26 @@
 
 package punto12.test;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import punto12.dominio.BusquedaLibro;
+
 import punto12.dominio.NuevoLibro;
+import punto8.utils.GestorLibros;
 
 
 public class ProgramaPrincipal {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        BusquedaLibro objBusqueda = new BusquedaLibro();
-        ArrayList<NuevoLibro> lista = new ArrayList<>();
-        int i = 0;
-        String isbn;
-        String titulo;
-        String autor;
-        double precio;
-        String categoria;
-        char resp ;
-        String[] categorias = {"Idioma", "Programacion", "Geografia", "Matematica", "Musica", "Historia", "Economia","Otros"};
-        do{
-          
-            System.out.println("\nLibro N°"+ (++i));
-            
-            do{
-                System.out.print("Ingrese el ISBN(978-950-####-##-#): 978-950-");
-                isbn = "978-950-"+scanner.next();
-            }while(!isbn.matches("\\d{3}-\\d{3}-\\d{4}-\\d{2}-\\d{1}"));
-            scanner.skip("\n");
-            do{
-                System.out.print("Ingrese el Titulo(15 caracteres MAX): ");
-                titulo = scanner.nextLine();  
-            }while(titulo.isEmpty() || titulo.length() > 15);
-            do{
-                System.out.print("Ingrese el Autor(15 caracteres MAX): ");
-                autor = scanner.nextLine(); 
-            }while(autor.isEmpty() || autor.length() > 15);
-            do{
-                System.out.print("Ingrese el precio(> $0): ");
-                precio = scanner.nextDouble();  
-            }while(precio <= 0);
-            
-            System.out.println("Categorias: ");
-            for(String cadena : categorias){
-                System.out.println("\t"+cadena);//se muestra la lista de categorias disponibles
-            }
-            boolean band = false;
-            do{
-                System.out.print("Ingrese una categoria: ");
-                categoria = scanner.next(); // se elige una de esas categorias
-                for (String categoria1 : categorias) {
-                    if(categoria1.equals(categoria)){
-                        band = true;
-                        break;
-                    }
-                        
-                }
-            }while(band == false);// se controla que el usuario haya elegido una categoria de esa lista
-            
-            NuevoLibro objLibro = new NuevoLibro(isbn, titulo, autor, precio, categoria); //obj libro es n 
-            lista.add(objLibro); //agrego a la lista los objetos del Nuevo libro
-            System.out.print("\nDesea Continuar S/N?: ");
-            resp = scanner.next().charAt(0);
-        }while(resp != 'N');
-        scanner.skip("\n");
-        objBusqueda.buscarLibro(lista);//se realiza la busqueda
+        GestorLibros gestor = new GestorLibros();//objeto para administrar los libros
+
+        NuevoLibro objLibro;
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-1111-11-1", "La Biblia de PHP", "Gabriel Garcia Marquez", 270,"Programacion"));
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-2222-22-2", "La Isla del Tesoro", "Robert Stevenson", 345, "Aventura"));
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-3333-33-3", "Programacion en C++", "Joyanes Luis Aguilar", 200, "Programacion"));
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-4444-44-4", "El viejo y el mar", "Ernest Hemingway", 318, "Drama"));
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-5555-55-5", "El Ruido y la furia", "William Faulkner", 320, "Accion"));
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-6666-66-6", "Tres tristes tigres", "Guillermo Infante", 180, "Drama"));
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-7777-77-7", "Dracula", "Stoker Bram", 278, "Terror"));
+        gestor.agregarLibro2(objLibro = new NuevoLibro("978-950-8888-88-8", "Un final Perfecto", "Katzebach John", 366, "Suspenso"));
+        
+        gestor.buscarLibro();
+        
     }
 }

@@ -28,6 +28,6 @@ public class ProgramaPrincipal {
         objGestor.agregarLibro(objLibro = new Libro("978-950-6666-66-6", "Tres tristes tigres", "Guillermo Infante", 180));
         
         System.out.print("\nIngrese el titulo del libro a buscar: ");       
-        objGestor.buscarLibro(scanner.nextLine()); //se ingresa el titulo del libro a buscar por parametro
+        objGestor.buscarPorTitulo(scanner.nextLine()); //se ingresa el titulo del libro a buscar por parametro
     }
 }
