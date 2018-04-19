@@ -21,6 +21,9 @@ public class GestorAuto {
         this.vector = vector;
     }
     //se carga la lista con datos ya definidos
+    /**
+     * Se realiza la carga de los datos precargados
+     */
     public void cargaDatos(){
        Autos auto1=new Autos("A00032","Ford",2018,"Gris","Diesel");
        Autos auto2=new Autos("A0048","Toyota",2016,"Negro","Super");
@@ -37,7 +40,10 @@ public class GestorAuto {
        vector[5]=auto6;
     }
     //se mostrara por pantalla todos los datos que tiene la lista
-     public void mostrar(){
+    /**
+     * Permite mostrar por pantalla los datos 
+     */ 
+    public void mostrar(){
          int i=0;
          System.out.println("\nN°\tPATENTE\t\tMARCA\t\tMODELO\t\tCOLOR\t\tCOMBUSTIBLE");
           System.out.println("---------------------------------------------------------------------------------------------------");
@@ -48,6 +54,9 @@ public class GestorAuto {
         }
     }
      //mostrar por pantallas las opcienes que puede realizar el usuario
+    /**
+     * Permite mostrar por pantalla las opciones que puede cambiar el usuario de un auto
+     */
      public void mostrarOpciones(){
          System.out.println("1)cambiar Patente");
          System.out.println("2)Cambiar Marca");
@@ -57,7 +66,10 @@ public class GestorAuto {
          System.out.println("6)Salir");
      }
      //permite cambiar los datos de un determinado auto solicitado
-       public void cambiarDatos(){
+     /**
+      * Permite cambiar datos de un auto en especifico ingresado por el usuario y acontinuacion que cambios desea realizar
+      */  
+     public void cambiarDatos(){
            Scanner input=new Scanner(System.in);
            int opc;
            System.out.println("Ingrese el numero de auto que desea cambiar:");
@@ -90,14 +102,14 @@ public class GestorAuto {
         System.out.println("Fin de cambios");
    
    default:
-        System.out.println("Deve ingresar datos validos");
+        System.out.println("Debe ingresar datos validos");
        }
        
     }while(opc!=6);
        mostrar();
        }
            else{
-               System.out.println("Deve ingresar un numero de auto valido");
+               System.out.println("Debe ingresar un numero de auto valido");
            }
        }
 }

@@ -13,21 +13,19 @@ public class Principal {
         Triangulo triangulo = new Triangulo();
         boolean band;
         System.out.println("Ingrese el primer lado"); //se solicita el ingreso de los tres lados de un triangulo
-        int ladoa = input.nextInt();
+        triangulo.setLado1(input.nextInt());
         System.out.println("Ingrese el segundo lado");
+        triangulo.setLado2(input.nextInt());
         int ladob = input.nextInt();
         System.out.println("Ingrese el tercer lado");
-        int ladoc = input.nextInt();
-        triangulo.setLado1(ladoa);
-        triangulo.setLado2(ladob);
-        triangulo.setLado3(ladoc);
+        triangulo.setLado3(input.nextInt());
         band = triangulo.verificarTriangulo(); //verifica dado los lados ingresados si forman un triangulo
-        //si devuelve true ents si es un tringulo sino no
+        //si devuelve true entonces si es un tringulo sino no
         if (band == true) {
             System.out.println("ES UN TRIANGULO");
             System.out.println("el perimetro es:" + triangulo.obtenerPerimetro());
         } else {
-            System.out.println("No es un TRIANGULO\nDebe ingresar datos validos");
+            System.out.println("No es un TRIANGULO Debe ingresar datos validos");
         }
 
     }

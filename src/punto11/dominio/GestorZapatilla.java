@@ -1,27 +1,40 @@
 
 package punto11.dominio;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-
 /**
  *
  * @author LENOVO
  */
 public class GestorZapatilla {
     ArrayList<Zapatilla> lista =new ArrayList();
-
+/**
+ * Permite la carga de datos a la lista
+ * @param zapatilla  
+ */
     public void cargarLista(Zapatilla zapatilla){
         this.lista.add(zapatilla);
     }
+    /**
+     * Permite la carga de datos a la lista
+     * @return ArrayList 
+     */
     public ArrayList<Zapatilla> getLista() {
         return lista;
     }
-
+/**
+ * Permite poder mostrar el contenido de la lista
+ * @param lista 
+ */
     public void setLista(ArrayList<Zapatilla> lista) {
         this.lista = lista;
     }
     //el metodo permite mostrar los objetos almacenados en la lista
+  /**
+   * Permite mostar todo el contenido de la lista
+   * @param lista 
+   */
+    
     public void mostarLista(ArrayList<Zapatilla> lista){
         int i=0;boolean bandera;
         //con \t\t permite realizar tabulacion
@@ -38,13 +51,12 @@ public class GestorZapatilla {
       * color de zapatilla
       * tipo de zapatilla
       * original o replica
-    **/    
+    **/   
 public void cargarZapatallias(){
         Scanner scanner=new Scanner(System.in);
         String marcas,color,tipo,verificador;char op;
         double num;
-        //el bucle repetira asta que el usuario no quiere cargar mas zapatillas
-       
+        //el bucle repetira asta que el usuario no quiera cargar mas zapatillas
         do{
             System.out.println("\nIngrese la marca de la zapatilla");
             marcas=scanner.nextLine(); 

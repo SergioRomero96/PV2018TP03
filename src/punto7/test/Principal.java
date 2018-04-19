@@ -8,7 +8,7 @@ import punto7.dominio.GestorAuto;
 public class Principal {
 
     public static void main(String[] args) {
-        //se define un vetor de GestorAuto con tamaño de 6
+        //se define un vector de GestorAuto con tamaño de 6
         GestorAuto vector = new GestorAuto(6);
         //permitira cargar datos al vector
         vector.cargaDatos();
